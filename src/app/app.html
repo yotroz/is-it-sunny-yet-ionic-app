@@ -1,8 +1,13 @@
 <ion-nav [root]="rootPage"></ion-nav>
 <ion-content>
-    <button ion-button (click)=searchCity()>
+      <button ion-button (click)=searchSunny()>
         When is it Sunny Again?
       </button>
-    
+      
+      <button ion-button (click)=searchCity()>
+          Find
+        </button>
       <input type="text" [(ngModel)]=cityName placeholder="write you city here">
+
+      <h3> The temperature is {{cityTemp}} ºC and it's {{cityDescription}} out there </h3>
 </ion-content>

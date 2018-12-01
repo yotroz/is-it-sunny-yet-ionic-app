@@ -24,15 +24,18 @@ export class MyApp {
   }
 
   cityName = ""
+  cityTemp =""
+  cityDescription = ""
   searchCity(){
     // this.http.get("http://api.openweathermap.org/data/2.5/weather?q=" + this.cityName + "&appid=d8731710a36674515c907d1a5d0d4a07")
-     this.http.get("http://api.openweathermap.org/data/2.5/weather?q=Madrid&appid=d8731710a36674515c907d1a5d0d4a07")
+     this.http.get("http://api.openweathermap.org/data/2.5/weather?q=Madrid&units=metric&appid=d8731710a36674515c907d1a5d0d4a07")
 
     .subscribe(
     (res: Response) => {
     const weatherCity = res.json(); 
     console.log(weatherCity);
-        
+    this.cityTemp = weatherCity.main.temp;   
+    this.cityDescription = weatherCity.weather[0].description; 
       }
     )
   }
