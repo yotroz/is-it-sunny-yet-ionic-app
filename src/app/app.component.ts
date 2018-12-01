@@ -34,6 +34,7 @@ export class MyApp {
     (res: Response) => {
     const weatherCity = res.json(); 
     console.log(weatherCity);
+    this.cityName = weatherCity.name; 
     this.cityTemp = weatherCity.main.temp;   
     this.cityDescription = weatherCity.weather[0].description; 
       }
