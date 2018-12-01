@@ -28,7 +28,8 @@ export class MyApp {
   cityDescription = ""
   searchCity(){
     // this.http.get("http://api.openweathermap.org/data/2.5/weather?q=" + this.cityName + "&appid=d8731710a36674515c907d1a5d0d4a07")
-     this.http.get("http://api.openweathermap.org/data/2.5/weather?q=Madrid&units=metric&appid=d8731710a36674515c907d1a5d0d4a07")
+     this.http.get("http://api.openweathermap.org/data/2.5/weather?q=" + this.cityName + "&units=metric&appid=d8731710a36674515c907d1a5d0d4a07")
+    //  this.http.get("http://api.openweathermap.org/data/2.5/weather?q=Madrid&units=metric&appid=d8731710a36674515c907d1a5d0d4a07")
 
     .subscribe(
     (res: Response) => {
